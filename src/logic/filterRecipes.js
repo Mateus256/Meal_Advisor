@@ -1,13 +1,13 @@
 function filterRecipes(
   recipes,
-  selectedMealType,
+  selectedMealTypes,
   selectedProteins,
   selectedCuisines,
   selectedTags
 ) {
   return recipes.filter((recipe) => {
     const matchesMealType =
-      selectedMealType === '' || recipe.mealType === selectedMealType;
+      selectedMealTypes.length === 0 || selectedMealTypes.includes(recipe.mealType);
 
     const matchesProtein =
       selectedProteins.length === 0 || selectedProteins.includes(recipe.protein);

@@ -7,9 +7,9 @@
     "protein": "chicken",
     "tags": ["high-protein", "quick"],
     "ingredients": [
-      { "name": "chicken breast", "quantity": 300, "unit": "g", "optional": false },
-      { "name": "rice", "quantity": 1, "unit": "cup", "optional": false },
-      { "name": "garlic", "quantity": 2, "unit": "cloves", "optional": false }
+      { "name": "chicken breast" },
+      { "name": "rice" },
+      { "name": "garlic" }
     ],
     "steps": [
       "Cook the rice.",
@@ -25,9 +25,9 @@
     "protein": "beef",
     "tags": ["comfort food"],
     "ingredients": [
-      { "name": "spaghetti", "quantity": 200, "unit": "g", "optional": false },
-      { "name": "ground beef", "quantity": 300, "unit": "g", "optional": false },
-      { "name": "tomato sauce", "quantity": 2, "unit": "cups", "optional": false }
+      { "name": "spaghetti" },
+      { "name": "ground beef" },
+      { "name": "tomato sauce" }
     ],
     "steps": [
       "Boil spaghetti.",
@@ -43,14 +43,1128 @@
     "protein": "vegetarian",
     "tags": ["quick"],
     "ingredients": [
-      { "name": "eggs", "quantity": 3, "unit": "pieces", "optional": false },
-      { "name": "onion", "quantity": 1, "unit": "piece", "optional": false },
-      { "name": "bell pepper", "quantity": 1, "unit": "piece", "optional": false }
+      { "name": "eggs" },
+      { "name": "onion" },
+      { "name": "bell pepper" }
     ],
     "steps": [
       "Beat eggs.",
       "Cook vegetables.",
       "Add eggs and cook."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Overnight Oats with Berries",
+    "mealType": "breakfast",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "rolled oats" },
+      { "name": "milk" },
+      { "name": "plain yogurt" },
+      { "name": "chia seeds" },
+      { "name": "honey" },
+      { "name": "vanilla extract" },
+      { "name": "mixed berries" }
+    ],
+    "steps": [
+      "Stir oats, milk, yogurt, chia seeds, honey, and vanilla in a jar until combined.",
+      "Cover and refrigerate at least 4 hours until thick.",
+      "Top with berries and add a splash of milk if you want a looser texture."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Greek Yogurt Parfait",
+    "mealType": "breakfast",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "greek yogurt" },
+      { "name": "honey" },
+      { "name": "granola" },
+      { "name": "strawberries" },
+      { "name": "nuts" }
+    ],
+    "steps": [
+      "Stir the honey into the yogurt.",
+      "Layer yogurt, strawberries, and granola in a glass or bowl.",
+      "Top with nuts and serve right away to keep the granola crunchy."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Scrambled Eggs with Spinach and Tomato",
+    "mealType": "breakfast",
+    "cuisine": "American",
+    "protein": "egg",
+    "tags": ["quick", "high-protein"],
+    "ingredients": [
+      { "name": "eggs" },
+      { "name": "milk" },
+      { "name": "butter" },
+      { "name": "spinach" },
+      { "name": "tomato" },
+      { "name": "salt" },
+      { "name": "black pepper" }
+    ],
+    "steps": [
+      "Whisk eggs with milk, salt, and pepper.",
+      "Melt butter in a pan, wilt spinach for 30-60 seconds, then pour in the eggs.",
+      "Stir gently until softly set, then fold in the tomato and serve."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Banana Oat Smoothie",
+    "mealType": "breakfast",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "banana" },
+      { "name": "milk" },
+      { "name": "rolled oats" },
+      { "name": "peanut butter" },
+      { "name": "honey" },
+      { "name": "ice" }
+    ],
+    "steps": [
+      "Add all ingredients to a blender.",
+      "Blend until smooth, scraping down the sides if needed.",
+      "Adjust thickness with a little more milk or ice, then serve."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Classic Pancakes",
+    "mealType": "breakfast",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "all-purpose flour" },
+      { "name": "baking powder" },
+      { "name": "sugar" },
+      { "name": "salt" },
+      { "name": "eggs" },
+      { "name": "milk" },
+      { "name": "vegetable oil" },
+      { "name": "butter" }
+    ],
+    "steps": [
+      "Whisk flour, baking powder, sugar, and salt; whisk egg, milk, and oil separately, then combine just until mixed.",
+      "Melt a little butter in a pan over medium heat and pour small rounds of batter.",
+      "Flip when bubbles form and edges look set, then cook until lightly golden."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Veggie Omelet with Cheese",
+    "mealType": "breakfast",
+    "cuisine": "French",
+    "protein": "egg",
+    "tags": ["quick", "high-protein"],
+    "ingredients": [
+      { "name": "eggs" },
+      { "name": "milk" },
+      { "name": "olive oil" },
+      { "name": "mushrooms" },
+      { "name": "bell pepper" },
+      { "name": "cheddar cheese" },
+      { "name": "salt" },
+      { "name": "black pepper" }
+    ],
+    "steps": [
+      "Saute mushrooms and bell pepper in olive oil until tender, then push to one side of the pan.",
+      "Whisk eggs with milk, salt, and pepper, then pour into the pan and cook until mostly set.",
+      "Add cheese and veggies, fold the omelet, and cook 30 seconds more before serving."
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Avocado Toast with Fried Egg",
+    "mealType": "breakfast",
+    "cuisine": "American",
+    "protein": "egg",
+    "tags": ["quick", "high-protein"],
+    "ingredients": [
+      { "name": "bread" },
+      { "name": "avocado" },
+      { "name": "lemon juice" },
+      { "name": "eggs" },
+      { "name": "olive oil" },
+      { "name": "salt" },
+      { "name": "black pepper" }
+    ],
+    "steps": [
+      "Toast the bread and mash avocado with lemon juice, salt, and pepper.",
+      "Fry eggs in olive oil to your preferred doneness.",
+      "Spread avocado on toast and top each slice with an egg."
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Peanut Butter Banana Toast",
+    "mealType": "breakfast",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "bread" },
+      { "name": "peanut butter" },
+      { "name": "banana" },
+      { "name": "cinnamon" }
+    ],
+    "steps": [
+      "Toast the bread if you like it warm and crisp.",
+      "Spread peanut butter evenly over each slice.",
+      "Top with banana slices and sprinkle with cinnamon."
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Breakfast Burritos with Beans and Cheese",
+    "mealType": "breakfast",
+    "cuisine": "Mexican",
+    "protein": "egg",
+    "tags": ["high-protein"],
+    "ingredients": [
+      { "name": "eggs" },
+      { "name": "black beans" },
+      { "name": "rice" },
+      { "name": "salsa" },
+      { "name": "cheddar cheese" },
+      { "name": "flour tortillas" },
+      { "name": "vegetable oil" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Scramble eggs with salt; warm beans and rice until hot.",
+      "Fill tortillas with eggs, beans, rice, salsa, and cheese, then roll tightly.",
+      "Optional: sear burritos seam-side down in a dry pan for 1-2 minutes to crisp."
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Apple Cinnamon Oatmeal",
+    "mealType": "breakfast",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "rolled oats" },
+      { "name": "water" },
+      { "name": "apple" },
+      { "name": "brown sugar" },
+      { "name": "cinnamon" },
+      { "name": "salt" },
+      { "name": "walnuts" }
+    ],
+    "steps": [
+      "Simmer oats, water, apple, and salt in a small pot, stirring often.",
+      "Cook until the oats are tender and the mixture thickens, 3-5 minutes.",
+      "Stir in brown sugar and cinnamon, then top with walnuts."
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Chicken Salad Sandwich",
+    "mealType": "lunch",
+    "cuisine": "American",
+    "protein": "chicken",
+    "tags": ["high-protein"],
+    "ingredients": [
+      { "name": "chicken" },
+      { "name": "mayonnaise" },
+      { "name": "celery" },
+      { "name": "red onion" },
+      { "name": "lemon juice" },
+      { "name": "salt" },
+      { "name": "black pepper" },
+      { "name": "bread" }
+    ],
+    "steps": [
+      "Mix chicken, mayonnaise, celery, onion, lemon juice, salt, and pepper until evenly coated.",
+      "Taste and adjust seasoning.",
+      "Spoon onto bread, close sandwiches, and slice to serve."
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Tuna Salad Lettuce Wraps",
+    "mealType": "lunch",
+    "cuisine": "American",
+    "protein": "fish",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "tuna" },
+      { "name": "mayonnaise" },
+      { "name": "mustard" },
+      { "name": "celery" },
+      { "name": "lemon juice" },
+      { "name": "salt" },
+      { "name": "black pepper" },
+      { "name": "lettuce" }
+    ],
+    "steps": [
+      "Stir tuna with mayonnaise, mustard, celery, lemon juice, salt, and pepper.",
+      "Spoon the mixture into lettuce leaves.",
+      "Fold and eat like wraps, or serve open as cups."
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Tomato Basil Soup",
+    "mealType": "lunch",
+    "cuisine": "Italian",
+    "protein": "vegetarian",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "olive oil" },
+      { "name": "onion" },
+      { "name": "garlic" },
+      { "name": "crushed tomatoes" },
+      { "name": "vegetable broth" },
+      { "name": "basil" },
+      { "name": "salt" },
+      { "name": "black pepper" }
+    ],
+    "steps": [
+      "Saute onion in olive oil until soft, then add garlic for 30 seconds.",
+      "Add tomatoes, broth, basil, salt, and pepper; simmer 15 minutes.",
+      "Blend until smooth, then reheat briefly and serve."
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Lentil Vegetable Soup",
+    "mealType": "lunch",
+    "cuisine": "Other",
+    "protein": "vegetarian",
+    "tags": [],
+    "ingredients": [
+      { "name": "olive oil" },
+      { "name": "onion" },
+      { "name": "carrots" },
+      { "name": "celery" },
+      { "name": "garlic" },
+      { "name": "lentils" },
+      { "name": "diced tomatoes" },
+      { "name": "vegetable broth" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Cook onion, carrots, and celery in olive oil until softened; add garlic for 30 seconds.",
+      "Add lentils, tomatoes, broth, and salt; simmer until lentils are tender, 25-35 minutes.",
+      "Adjust seasoning and serve."
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Hummus and Veggie Pita",
+    "mealType": "lunch",
+    "cuisine": "Middle Eastern",
+    "protein": "vegetarian",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "pita bread" },
+      { "name": "hummus" },
+      { "name": "cucumber" },
+      { "name": "tomato" },
+      { "name": "red onion" },
+      { "name": "spinach" },
+      { "name": "feta cheese" }
+    ],
+    "steps": [
+      "Cut pitas open or split them to make pockets.",
+      "Spread hummus inside and add vegetables and feta.",
+      "Close, slice in half, and serve."
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Cheesy Bean Quesadillas",
+    "mealType": "lunch",
+    "cuisine": "Mexican",
+    "protein": "vegetarian",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "flour tortillas" },
+      { "name": "black beans" },
+      { "name": "cheddar cheese" },
+      { "name": "salsa" },
+      { "name": "olive oil" },
+      { "name": "cumin" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Lightly mash beans with cumin and salt.",
+      "Fill tortillas with beans and cheese, fold, and toast in a lightly oiled pan until golden on both sides.",
+      "Cut into wedges and serve with salsa."
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Mediterranean Chickpea Salad",
+    "mealType": "lunch",
+    "cuisine": "Mediterranean",
+    "protein": "vegetarian",
+    "tags": [],
+    "ingredients": [
+      { "name": "chickpeas" },
+      { "name": "cucumber" },
+      { "name": "cherry tomatoes" },
+      { "name": "olives" },
+      { "name": "feta cheese" },
+      { "name": "olive oil" },
+      { "name": "lemon juice" },
+      { "name": "oregano" }
+    ],
+    "steps": [
+      "Combine chickpeas, cucumber, tomatoes, olives, and feta in a bowl.",
+      "Whisk olive oil, lemon juice, and oregano, then pour over and toss.",
+      "Chill 15 minutes for best flavor, then serve."
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Turkey and Cheese Wrap",
+    "mealType": "lunch",
+    "cuisine": "American",
+    "protein": "turkey",
+    "tags": ["quick", "high-protein"],
+    "ingredients": [
+      { "name": "flour tortillas" },
+      { "name": "turkey" },
+      { "name": "cheddar cheese" },
+      { "name": "mustard" },
+      { "name": "lettuce" },
+      { "name": "tomato" }
+    ],
+    "steps": [
+      "Spread mustard on tortillas.",
+      "Layer turkey, cheese, lettuce, and tomato.",
+      "Roll tightly and slice in half to serve."
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Vegetable Fried Rice",
+    "mealType": "lunch",
+    "cuisine": "Chinese",
+    "protein": "egg",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "rice" },
+      { "name": "vegetable oil" },
+      { "name": "onion" },
+      { "name": "carrots" },
+      { "name": "peas" },
+      { "name": "garlic" },
+      { "name": "eggs" },
+      { "name": "soy sauce" },
+      { "name": "sesame oil" }
+    ],
+    "steps": [
+      "Cook onion and carrot in oil until tender; add garlic for 30 seconds, then stir in peas.",
+      "Push veggies aside, scramble eggs in the pan, then mix everything together.",
+      "Add rice, soy sauce, and sesame oil; stir-fry until hot and evenly seasoned."
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Veggie Pasta Salad",
+    "mealType": "lunch",
+    "cuisine": "Italian",
+    "protein": "vegetarian",
+    "tags": [],
+    "ingredients": [
+      { "name": "pasta" },
+      { "name": "cherry tomatoes" },
+      { "name": "cucumber" },
+      { "name": "bell pepper" },
+      { "name": "feta cheese" },
+      { "name": "olive oil" },
+      { "name": "vinegar" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Cook pasta until tender, drain, and cool under cold water.",
+      "Toss pasta with vegetables, feta, olive oil, vinegar, and salt.",
+      "Chill before serving for best texture and flavor."
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Baked Lemon Garlic Salmon",
+    "mealType": "dinner",
+    "cuisine": "American",
+    "protein": "fish",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "salmon" },
+      { "name": "lemon" },
+      { "name": "garlic" },
+      { "name": "butter" },
+      { "name": "olive oil" },
+      { "name": "salt" },
+      { "name": "black pepper" }
+    ],
+    "steps": [
+      "Place salmon on a baking sheet, season with salt and pepper, and add lemon slices on top.",
+      "Melt butter with garlic and olive oil, then spoon over the salmon.",
+      "Bake at 200C until flaky, about 10-14 minutes depending on thickness."
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Quick Chicken Stir-Fry",
+    "mealType": "dinner",
+    "cuisine": "Chinese",
+    "protein": "chicken",
+    "tags": ["quick", "high-protein"],
+    "ingredients": [
+      { "name": "chicken breast" },
+      { "name": "vegetable oil" },
+      { "name": "bell pepper" },
+      { "name": "broccoli" },
+      { "name": "carrots" },
+      { "name": "garlic" },
+      { "name": "soy sauce" },
+      { "name": "honey" },
+      { "name": "cornstarch" }
+    ],
+    "steps": [
+      "Mix soy sauce, honey, and cornstarch to make a quick sauce.",
+      "Stir-fry chicken in oil until mostly cooked, then add vegetables and cook until crisp-tender.",
+      "Pour in sauce and cook 1-2 minutes until glossy and thickened."
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Ground Beef Tacos",
+    "mealType": "dinner",
+    "cuisine": "Mexican",
+    "protein": "beef",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "ground beef" },
+      { "name": "onion" },
+      { "name": "taco seasoning" },
+      { "name": "water" },
+      { "name": "taco shells" },
+      { "name": "lettuce" },
+      { "name": "tomato" },
+      { "name": "cheddar cheese" }
+    ],
+    "steps": [
+      "Cook beef and onion until browned; drain excess fat if needed.",
+      "Add taco seasoning and water; simmer 3-5 minutes until thickened.",
+      "Fill shells with meat and top with lettuce, tomatoes, and cheese."
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Turkey Chili",
+    "mealType": "dinner",
+    "cuisine": "American",
+    "protein": "turkey",
+    "tags": ["high-protein"],
+    "ingredients": [
+      { "name": "ground turkey" },
+      { "name": "olive oil" },
+      { "name": "onion" },
+      { "name": "bell pepper" },
+      { "name": "garlic" },
+      { "name": "chili powder" },
+      { "name": "cumin" },
+      { "name": "diced tomatoes" },
+      { "name": "kidney beans" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Saute onion and bell pepper in olive oil; add garlic for 30 seconds.",
+      "Brown turkey, then add chili powder, cumin, tomatoes, beans, and salt.",
+      "Simmer 20-30 minutes, stirring occasionally, until thick and flavorful."
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Chickpea Coconut Curry",
+    "mealType": "dinner",
+    "cuisine": "Indian",
+    "protein": "vegetarian",
+    "tags": [],
+    "ingredients": [
+      { "name": "olive oil" },
+      { "name": "onion" },
+      { "name": "garlic" },
+      { "name": "curry powder" },
+      { "name": "diced tomatoes" },
+      { "name": "chickpeas" },
+      { "name": "coconut milk" },
+      { "name": "spinach" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Cook onion in oil until soft; add garlic and curry powder and stir 30-60 seconds.",
+      "Add tomatoes, chickpeas, coconut milk, and salt; simmer 10-15 minutes.",
+      "Stir in spinach until wilted and serve over rice."
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Sheet-Pan Chicken Fajitas",
+    "mealType": "dinner",
+    "cuisine": "Mexican",
+    "protein": "chicken",
+    "tags": ["quick", "high-protein"],
+    "ingredients": [
+      { "name": "chicken breast" },
+      { "name": "bell pepper" },
+      { "name": "onion" },
+      { "name": "olive oil" },
+      { "name": "chili powder" },
+      { "name": "cumin" },
+      { "name": "paprika" },
+      { "name": "salt" },
+      { "name": "flour tortillas" }
+    ],
+    "steps": [
+      "Toss chicken and vegetables with olive oil, spices, and salt on a sheet pan.",
+      "Roast at 220C, stirring once, until chicken is cooked and edges char slightly.",
+      "Warm tortillas and serve fajita filling with your preferred toppings."
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Beef and Broccoli Stir-Fry",
+    "mealType": "dinner",
+    "cuisine": "Chinese",
+    "protein": "beef",
+    "tags": ["quick", "high-protein"],
+    "ingredients": [
+      { "name": "beef" },
+      { "name": "vegetable oil" },
+      { "name": "broccoli" },
+      { "name": "garlic" },
+      { "name": "soy sauce" },
+      { "name": "brown sugar" },
+      { "name": "cornstarch" },
+      { "name": "water" },
+      { "name": "sesame oil" }
+    ],
+    "steps": [
+      "Whisk soy sauce, brown sugar, cornstarch, water, and sesame oil into a sauce.",
+      "Sear beef in oil, then remove; stir-fry broccoli until bright and crisp-tender, adding garlic near the end.",
+      "Return beef, pour in sauce, and cook 1-2 minutes until thickened."
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Baked Chicken Thighs and Potatoes",
+    "mealType": "dinner",
+    "cuisine": "American",
+    "protein": "chicken",
+    "tags": [],
+    "ingredients": [
+      { "name": "chicken thighs" },
+      { "name": "potatoes" },
+      { "name": "olive oil" },
+      { "name": "garlic powder" },
+      { "name": "paprika" },
+      { "name": "rosemary" },
+      { "name": "salt" },
+      { "name": "black pepper" }
+    ],
+    "steps": [
+      "Toss potatoes with olive oil, half the salt, and seasonings; spread on a sheet pan.",
+      "Season chicken with remaining salt and pepper and place among potatoes.",
+      "Bake at 220C until chicken is cooked and potatoes are tender, about 35-45 minutes."
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Black Bean Burgers",
+    "mealType": "dinner",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": [],
+    "ingredients": [
+      { "name": "black beans" },
+      { "name": "breadcrumbs" },
+      { "name": "eggs" },
+      { "name": "onion" },
+      { "name": "garlic" },
+      { "name": "cumin" },
+      { "name": "paprika" },
+      { "name": "ketchup" },
+      { "name": "olive oil" }
+    ],
+    "steps": [
+      "Mash beans until mostly crushed, then mix with breadcrumbs, egg, onion, garlic, spices, and ketchup.",
+      "Form into patties and chill 10 minutes so they hold together better.",
+      "Pan-fry in olive oil until browned on both sides and heated through."
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Crispy Tofu Vegetable Stir-Fry",
+    "mealType": "dinner",
+    "cuisine": "Chinese",
+    "protein": "tofu",
+    "tags": ["vegan", "quick"],
+    "ingredients": [
+      { "name": "tofu" },
+      { "name": "cornstarch" },
+      { "name": "vegetable oil" },
+      { "name": "bell pepper" },
+      { "name": "broccoli" },
+      { "name": "carrots" },
+      { "name": "garlic" },
+      { "name": "soy sauce" },
+      { "name": "brown sugar" }
+    ],
+    "steps": [
+      "Toss tofu with cornstarch; fry in oil until crisp, then set aside.",
+      "Stir-fry vegetables until crisp-tender; add garlic near the end.",
+      "Return tofu and add soy sauce and brown sugar; toss until glazed and hot."
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Shrimp Rice Bowls with Crunchy Veggies",
+    "mealType": "dinner",
+    "cuisine": "Other",
+    "protein": "shrimp",
+    "tags": ["quick", "high-protein"],
+    "ingredients": [
+      { "name": "shrimp" },
+      { "name": "rice" },
+      { "name": "cucumber" },
+      { "name": "carrots" },
+      { "name": "avocado" },
+      { "name": "soy sauce" },
+      { "name": "lime juice" },
+      { "name": "honey" },
+      { "name": "vegetable oil" }
+    ],
+    "steps": [
+      "Stir soy sauce, lime juice, and honey to make a quick dressing.",
+      "Saute shrimp in oil until pink and cooked through, 2-4 minutes.",
+      "Build bowls with rice, vegetables, shrimp, and drizzle with dressing."
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Vegetable Lasagna",
+    "mealType": "dinner",
+    "cuisine": "Italian",
+    "protein": "vegetarian",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "lasagna noodles" },
+      { "name": "ricotta cheese" },
+      { "name": "mozzarella cheese" },
+      { "name": "spinach" },
+      { "name": "zucchini" },
+      { "name": "mushrooms" },
+      { "name": "tomato sauce" },
+      { "name": "eggs" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Cook noodles until flexible; mix ricotta with egg, salt, and spinach.",
+      "Layer sauce, noodles, ricotta mixture, vegetables, and mozzarella in a baking dish.",
+      "Bake at 190C until bubbly and browned on top, then rest 10 minutes before slicing."
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Chicken Noodle Soup",
+    "mealType": "dinner",
+    "cuisine": "American",
+    "protein": "chicken",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "olive oil" },
+      { "name": "onion" },
+      { "name": "carrots" },
+      { "name": "celery" },
+      { "name": "garlic" },
+      { "name": "chicken broth" },
+      { "name": "chicken" },
+      { "name": "egg noodles" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Cook onion, carrots, and celery in olive oil until softened; add garlic for 30 seconds.",
+      "Add broth and salt, bring to a simmer, then cook noodles until tender.",
+      "Stir in chicken and heat through before serving."
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Minestrone Soup",
+    "mealType": "dinner",
+    "cuisine": "Italian",
+    "protein": "vegetarian",
+    "tags": [],
+    "ingredients": [
+      { "name": "olive oil" },
+      { "name": "onion" },
+      { "name": "carrots" },
+      { "name": "celery" },
+      { "name": "garlic" },
+      { "name": "diced tomatoes" },
+      { "name": "vegetable broth" },
+      { "name": "white beans" },
+      { "name": "pasta" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Saute onion, carrots, and celery in olive oil until softened; add garlic briefly.",
+      "Add tomatoes, broth, beans, pasta, and salt; simmer until pasta is tender.",
+      "Rest 5 minutes, then serve."
+    ]
+  },
+  {
+    "id": 38,
+    "title": "Teriyaki Chicken Rice Bowl",
+    "mealType": "dinner",
+    "cuisine": "Japanese",
+    "protein": "chicken",
+    "tags": ["quick", "high-protein"],
+    "ingredients": [
+      { "name": "chicken thighs" },
+      { "name": "rice" },
+      { "name": "broccoli" },
+      { "name": "carrots" },
+      { "name": "soy sauce" },
+      { "name": "brown sugar" },
+      { "name": "vinegar" },
+      { "name": "ginger" },
+      { "name": "cornstarch" }
+    ],
+    "steps": [
+      "Whisk soy sauce, brown sugar, vinegar, ginger, and cornstarch to make a sauce.",
+      "Cook chicken until browned and cooked through; steam or microwave broccoli and carrot until tender-crisp.",
+      "Add sauce to chicken and simmer briefly to thicken, then serve over rice with vegetables."
+    ]
+  },
+  {
+    "id": 39,
+    "title": "Stuffed Bell Peppers",
+    "mealType": "dinner",
+    "cuisine": "American",
+    "protein": "beef",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "bell pepper" },
+      { "name": "ground beef" },
+      { "name": "rice" },
+      { "name": "onion" },
+      { "name": "garlic" },
+      { "name": "tomato sauce" },
+      { "name": "oregano" },
+      { "name": "salt" },
+      { "name": "shredded cheese" }
+    ],
+    "steps": [
+      "Cut tops off peppers and remove seeds; bake empty peppers at 190C for 10 minutes to soften.",
+      "Cook beef with onion and garlic, then stir in rice, tomato sauce, oregano, and salt.",
+      "Stuff peppers, top with cheese, and bake until hot and melted, about 15-20 minutes."
+    ]
+  },
+  {
+    "id": 40,
+    "title": "Pesto Pasta with Tomatoes",
+    "mealType": "dinner",
+    "cuisine": "Italian",
+    "protein": "vegetarian",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "pasta" },
+      { "name": "pesto" },
+      { "name": "cherry tomatoes" },
+      { "name": "spinach" },
+      { "name": "parmesan cheese" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Cook pasta until tender and reserve a splash of cooking water, then drain.",
+      "Toss pasta with pesto and a little cooking water to loosen into a sauce.",
+      "Fold in tomatoes, spinach, parmesan, and salt; serve once spinach wilts."
+    ]
+  },
+  {
+    "id": 41,
+    "title": "Sausage and Peppers Skillet",
+    "mealType": "dinner",
+    "cuisine": "Italian",
+    "protein": "pork",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "sausage" },
+      { "name": "olive oil" },
+      { "name": "onion" },
+      { "name": "bell pepper" },
+      { "name": "garlic" },
+      { "name": "diced tomatoes" },
+      { "name": "salt" },
+      { "name": "oregano" }
+    ],
+    "steps": [
+      "Brown sausage in a skillet, then remove and slice; add olive oil if the pan is dry.",
+      "Cook onion and peppers until softened; add garlic briefly.",
+      "Return sausage, add tomatoes, oregano, and salt, and simmer 10 minutes."
+    ]
+  },
+  {
+    "id": 42,
+    "title": "Vegetable Stir-Fry Noodles",
+    "mealType": "dinner",
+    "cuisine": "Chinese",
+    "protein": "vegetarian",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "noodles" },
+      { "name": "vegetable oil" },
+      { "name": "bell pepper" },
+      { "name": "carrots" },
+      { "name": "broccoli" },
+      { "name": "garlic" },
+      { "name": "soy sauce" },
+      { "name": "brown sugar" },
+      { "name": "vinegar" }
+    ],
+    "steps": [
+      "Cook noodles, drain, and set aside.",
+      "Stir-fry vegetables in oil until crisp-tender; add garlic for 30 seconds.",
+      "Add noodles, soy sauce, brown sugar, and vinegar; toss until glossy and hot."
+    ]
+  },
+  {
+    "id": 43,
+    "title": "Classic Guacamole",
+    "mealType": "snack",
+    "cuisine": "Mexican",
+    "protein": "vegetarian",
+    "tags": ["vegan"],
+    "ingredients": [
+      { "name": "avocado" },
+      { "name": "onion" },
+      { "name": "garlic" },
+      { "name": "lime juice" },
+      { "name": "salt" },
+      { "name": "cilantro" },
+      { "name": "jalapeno" },
+      { "name": "tomato" }
+    ],
+    "steps": [
+      "Mash avocados in a bowl until mostly smooth with some texture.",
+      "Stir in onion, garlic, lime juice, salt, cilantro, jalapeno, and tomato.",
+      "Taste and adjust salt or lime, then serve immediately."
+    ]
+  },
+  {
+    "id": 44,
+    "title": "Roasted Spiced Chickpeas",
+    "mealType": "snack",
+    "cuisine": "Other",
+    "protein": "vegetarian",
+    "tags": ["vegan"],
+    "ingredients": [
+      { "name": "chickpeas" },
+      { "name": "olive oil" },
+      { "name": "paprika" },
+      { "name": "garlic powder" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Pat chickpeas very dry, then toss with olive oil and spices.",
+      "Roast at 220C until crisp, shaking the pan once, about 20-30 minutes.",
+      "Cool completely to maximize crunch, then store in a container."
+    ]
+  },
+  {
+    "id": 45,
+    "title": "Simple Trail Mix",
+    "mealType": "snack",
+    "cuisine": "Other",
+    "protein": "vegetarian",
+    "tags": [],
+    "ingredients": [
+      { "name": "almonds" },
+      { "name": "peanuts" },
+      { "name": "raisins" },
+      { "name": "sunflower seeds" },
+      { "name": "chocolate chips" }
+    ],
+    "steps": [
+      "Combine all ingredients in a bowl.",
+      "Mix well and portion into small containers or bags.",
+      "Store at room temperature for quick snacks."
+    ]
+  },
+  {
+    "id": 46,
+    "title": "Honey-Lime Fruit Salad",
+    "mealType": "snack",
+    "cuisine": "Other",
+    "protein": "vegetarian",
+    "tags": [],
+    "ingredients": [
+      { "name": "mixed fruit" },
+      { "name": "honey" },
+      { "name": "lime juice" },
+      { "name": "lemon zest" },
+      { "name": "mint" }
+    ],
+    "steps": [
+      "Add fruit to a bowl.",
+      "Whisk honey, lime juice, and zest, then pour over fruit and toss gently.",
+      "Top with mint and chill 10-15 minutes before serving."
+    ]
+  },
+  {
+    "id": 47,
+    "title": "No-Bake Energy Bites",
+    "mealType": "snack",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": [],
+    "ingredients": [
+      { "name": "rolled oats" },
+      { "name": "peanut butter" },
+      { "name": "honey" },
+      { "name": "chia seeds" },
+      { "name": "chocolate chips" },
+      { "name": "vanilla extract" }
+    ],
+    "steps": [
+      "Mix oats, peanut butter, honey, chia seeds, chocolate chips, and vanilla until thick.",
+      "Chill 15 minutes so the mixture firms up.",
+      "Roll into small balls and store refrigerated."
+    ]
+  },
+  {
+    "id": 48,
+    "title": "Chocolate Chip Cookies",
+    "mealType": "dessert",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "butter" },
+      { "name": "brown sugar" },
+      { "name": "sugar" },
+      { "name": "eggs" },
+      { "name": "vanilla extract" },
+      { "name": "all-purpose flour" },
+      { "name": "baking soda" },
+      { "name": "salt" },
+      { "name": "chocolate chips" }
+    ],
+    "steps": [
+      "Cream butter and sugars, then mix in egg and vanilla until smooth.",
+      "Stir in flour, baking soda, and salt, then fold in chocolate chips.",
+      "Bake spoonfuls at 180C until edges set, about 10-12 minutes."
+    ]
+  },
+  {
+    "id": 49,
+    "title": "Classic Banana Bread",
+    "mealType": "dessert",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "banana" },
+      { "name": "butter" },
+      { "name": "sugar" },
+      { "name": "eggs" },
+      { "name": "vanilla extract" },
+      { "name": "all-purpose flour" },
+      { "name": "baking soda" },
+      { "name": "salt" },
+      { "name": "cinnamon" }
+    ],
+    "steps": [
+      "Mix mashed bananas with melted butter, sugar, eggs, and vanilla.",
+      "Fold in flour, baking soda, salt, and cinnamon until just combined.",
+      "Bake at 175C until a tester comes out clean, about 50-65 minutes."
+    ]
+  },
+  {
+    "id": 50,
+    "title": "Apple Crisp",
+    "mealType": "dessert",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "apple" },
+      { "name": "lemon juice" },
+      { "name": "sugar" },
+      { "name": "cinnamon" },
+      { "name": "rolled oats" },
+      { "name": "all-purpose flour" },
+      { "name": "brown sugar" },
+      { "name": "butter" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Toss apples with lemon juice, sugar, and cinnamon, then spread in a baking dish.",
+      "Rub butter into oats, flour, brown sugar, and salt until crumbly; sprinkle over apples.",
+      "Bake at 190C until bubbling and golden, about 35-45 minutes."
+    ]
+  },
+  {
+    "id": 51,
+    "title": "Easy Cocoa Brownies",
+    "mealType": "dessert",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "butter" },
+      { "name": "sugar" },
+      { "name": "eggs" },
+      { "name": "vanilla extract" },
+      { "name": "cocoa powder" },
+      { "name": "all-purpose flour" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Melt butter and whisk in sugar, then beat in eggs and vanilla.",
+      "Stir in cocoa powder, flour, and salt until just combined.",
+      "Bake at 175C until set but still fudgy in the center, about 20-25 minutes."
+    ]
+  },
+  {
+    "id": 52,
+    "title": "Creamy Rice Pudding",
+    "mealType": "dessert",
+    "cuisine": "Other",
+    "protein": "vegetarian",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "rice" },
+      { "name": "milk" },
+      { "name": "sugar" },
+      { "name": "vanilla extract" },
+      { "name": "cinnamon" },
+      { "name": "salt" }
+    ],
+    "steps": [
+      "Simmer rice, milk, and salt over low heat, stirring often so it doesn't stick.",
+      "Cook until rice is tender and the pudding is creamy, 30-45 minutes.",
+      "Stir in sugar, vanilla, and cinnamon, then serve warm or chilled."
     ]
   }
 ]
