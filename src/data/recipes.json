@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Grilled Chicken Rice Bowl",
+    "mealType": "lunch",
+    "cuisine": "American",
+    "protein": "chicken",
+    "tags": ["high-protein", "quick"],
+    "ingredients": [
+      { "name": "chicken breast", "quantity": 300, "unit": "g", "optional": false },
+      { "name": "rice", "quantity": 1, "unit": "cup", "optional": false },
+      { "name": "garlic", "quantity": 2, "unit": "cloves", "optional": false }
+    ],
+    "steps": [
+      "Cook the rice.",
+      "Season and cook the chicken.",
+      "Serve together."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Spaghetti Bolognese",
+    "mealType": "dinner",
+    "cuisine": "Italian",
+    "protein": "beef",
+    "tags": ["comfort food"],
+    "ingredients": [
+      { "name": "spaghetti", "quantity": 200, "unit": "g", "optional": false },
+      { "name": "ground beef", "quantity": 300, "unit": "g", "optional": false },
+      { "name": "tomato sauce", "quantity": 2, "unit": "cups", "optional": false }
+    ],
+    "steps": [
+      "Boil spaghetti.",
+      "Cook beef.",
+      "Add sauce and combine."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Vegetable Omelette",
+    "mealType": "breakfast",
+    "cuisine": "American",
+    "protein": "vegetarian",
+    "tags": ["quick"],
+    "ingredients": [
+      { "name": "eggs", "quantity": 3, "unit": "pieces", "optional": false },
+      { "name": "onion", "quantity": 1, "unit": "piece", "optional": false },
+      { "name": "bell pepper", "quantity": 1, "unit": "piece", "optional": false }
+    ],
+    "steps": [
+      "Beat eggs.",
+      "Cook vegetables.",
+      "Add eggs and cook."
+    ]
+  }
+]
