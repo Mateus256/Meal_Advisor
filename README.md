@@ -1,16 +1,54 @@
-# React + Vite
+# Meal Advisor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React web app that helps you plan and discover meals.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Make sure you have the following installed before running the app:
 
-## React Compiler
+- [Node.js](https://nodejs.org/) (version 18 or higher recommended)
+- npm (comes bundled with Node.js)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+You can check if they are installed by running:
 
-## Expanding the ESLint configuration
+```
+node -v
+npm -v
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+**1. Clone the repository**
+
+```
+git clone <your-repo-url>
+cd meal-advisor
+```
+
+**2. Install dependencies**
+
+```
+npm install
+```
+
+**3. Start the development server**
+
+```
+npm run dev
+```
+
+The app will be available at `http://localhost:5173` in your browser.
+
+## Other Commands
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the local development server |
+| `npm run build` | Build the app for production |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run the linter to check for code issues |
+
+## Tech Stack
+
+- [React 19](https://react.dev/)
+- [Vite](https://vitejs.dev/)
