@@ -15,7 +15,10 @@ function matchRecipesByIngredients(recipes, selectedIngredients) {
         missingCount: missingIngredients.length,
       };
     })
-    .filter((item) => item.missingCount <= 3)
+    .filter((item) =>
+      item.missingCount <= 5 &&
+      item.recipe.ingredients.some(ing => selectedIngredients.includes(ing.name))
+    )
     .sort((a, b) => a.missingCount - b.missingCount);
 }
 

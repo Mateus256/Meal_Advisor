@@ -3,6 +3,7 @@ import recipes from '../data/recipes.json';
 import filterRecipes from '../logic/filterRecipes';
 import getUniqueValues from '../logic/getUniqueValues';
 import getAllTags from '../logic/getAllTags';
+import ExcludeIngredientsPanel from '../components/ExcludeIngredientsPanel';
 
 function FilterDropdown({ label, options, selectedValues, onToggle, onClear, isOpen, onOpen, onClose }) {
   const ref = useRef(null);
@@ -65,19 +66,25 @@ function FilterDropdown({ label, options, selectedValues, onToggle, onClear, isO
   );
 }
 
-function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
+function RecipeFinderPage({ setCurrentPage, openRecipeDetail, favorites, toggleFavorite, excludedIngredients, toggleExcluded, clearExcluded }) {
   const [selectedMealTypes, setSelectedMealTypes] = useState([]);
   const [selectedProteins, setSelectedProteins] = useState([]);
   const [selectedCuisines, setSelectedCuisines] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
 
   const [openFilter, setOpenFilter] = useState(null);
+  const [surpriseRecipe, setSurpriseRecipe] = useState(null);
 
   const clearAllFilters = () => {
     setSelectedMealTypes([]);
     setSelectedProteins([]);
     setSelectedCuisines([]);
     setSelectedTags([]);
+  };
+
+  const handleSurpriseMe = () => {
+    const pick = recipes[Math.floor(Math.random() * recipes.length)];
+    setSurpriseRecipe(pick);
   };
 
   const toggle = (setter) => (value) =>
@@ -97,6 +104,12 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
     selectedCuisines,
     selectedTags
   );
+
+  const visibleRecipes = excludedIngredients.length === 0
+    ? filteredRecipes
+    : filteredRecipes.filter(recipe =>
+        !recipe.ingredients.some(ing => excludedIngredients.includes(ing.name))
+      );
 
   return (
     <>
@@ -125,20 +138,21 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
           padding: 0.4rem 0.9rem;
           font-size: 0.9rem;
           cursor: pointer;
-          border: 1px solid #ccc;
+          border: 1px solid var(--border);
           border-radius: 5px;
-          background: #fff;
+          background: var(--bg);
+          color: var(--text);
           white-space: nowrap;
         }
 
-        .rfp-back-btn:hover { background: #f5f5f5; }
+        .rfp-back-btn:hover { background: var(--surface-hover); border-color: var(--border-hover); }
 
         .rfp-filter-box {
-          border: 1px solid #ddd;
+          border: 1px solid var(--border-md);
           border-radius: 8px;
           padding: 1.25rem 1.5rem;
           margin-bottom: 2rem;
-          background: #fafafa;
+          background: var(--surface);
         }
 
         .rfp-filter-box-header {
@@ -154,20 +168,20 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
           margin: 0;
           text-transform: uppercase;
           letter-spacing: 0.04em;
-          color: #444;
+          color: var(--text-2);
         }
 
         .rfp-clear-btn {
           padding: 0.35rem 0.8rem;
           font-size: 0.85rem;
           cursor: pointer;
-          border: 1px solid #ccc;
+          border: 1px solid var(--border);
           border-radius: 5px;
-          background: #fff;
-          color: #555;
+          background: var(--bg);
+          color: var(--text-2);
         }
 
-        .rfp-clear-btn:hover { background: #f5f5f5; }
+        .rfp-clear-btn:hover { background: var(--surface-hover); border-color: var(--border-hover); }
 
         .rfp-filter-grid {
           display: grid;
@@ -184,7 +198,7 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
         .rfp-filter-label {
           font-size: 0.8rem;
           font-weight: 600;
-          color: #555;
+          color: var(--text-2);
           text-transform: uppercase;
           letter-spacing: 0.03em;
         }
@@ -202,18 +216,19 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
           width: 100%;
           padding: 0.45rem 0.6rem;
           font-size: 0.9rem;
-          border: 1px solid #ccc;
+          border: 1px solid var(--border);
           border-radius: 5px;
-          background: #fff;
+          background: var(--bg);
+          color: var(--text);
           cursor: pointer;
           box-sizing: border-box;
           text-align: left;
         }
 
-        .fdd-trigger:hover { border-color: #999; }
+        .fdd-trigger:hover { border-color: var(--border-hover); }
 
         .fdd-trigger--open {
-          border-color: #999;
+          border-color: var(--border-hover);
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
@@ -222,12 +237,12 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          color: #1a1a1a;
+          color: var(--text);
         }
 
         .fdd-arrow {
           font-size: 0.7rem;
-          color: #888;
+          color: var(--text-3);
           margin-left: 0.5rem;
           flex-shrink: 0;
         }
@@ -238,11 +253,11 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
           left: 0;
           right: 0;
           z-index: 200;
-          background: #fff;
-          border: 1px solid #999;
+          background: var(--bg);
+          border: 1px solid var(--border-hover);
           border-top: none;
           border-radius: 0 0 5px 5px;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .fdd-list {
@@ -264,14 +279,14 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
           border: none;
           cursor: pointer;
           text-align: left;
-          color: #1a1a1a;
+          color: var(--text);
         }
 
-        .fdd-option:hover { background: #f5f5f5; }
+        .fdd-option:hover { background: var(--surface-hover); }
 
-        .fdd-option--selected { background: #edfaeb; }
+        .fdd-option--selected { background: var(--accent-bg); }
 
-        .fdd-option--selected:hover { background: #dff5dc; }
+        .fdd-option--selected:hover { background: var(--accent-hover); }
 
         .fdd-checkbox {
           display: inline-flex;
@@ -279,17 +294,17 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
           justify-content: center;
           width: 1rem;
           height: 1rem;
-          border: 1px solid #ccc;
+          border: 1px solid var(--border);
           border-radius: 3px;
           font-size: 0.65rem;
           flex-shrink: 0;
-          background: #fff;
-          color: #2a7a2a;
+          background: var(--bg);
+          color: var(--accent-check);
         }
 
         .fdd-option--selected .fdd-checkbox {
-          background: #c6f0c2;
-          border-color: #7dc97a;
+          background: var(--accent-mid);
+          border-color: var(--accent-border);
         }
 
         .fdd-footer {
@@ -297,37 +312,38 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
           justify-content: space-between;
           align-items: center;
           padding: 0.4rem 0.75rem;
-          border-top: 1px solid #eee;
+          border-top: 1px solid var(--border-light);
           gap: 0.5rem;
         }
 
         .fdd-clear {
           font-size: 0.8rem;
-          color: #888;
+          color: var(--text-3);
           background: none;
           border: none;
           cursor: pointer;
           padding: 0.2rem 0.4rem;
         }
 
-        .fdd-clear:hover { color: #555; }
+        .fdd-clear:hover { color: var(--text-2); }
 
         .fdd-done {
           font-size: 0.85rem;
           font-weight: 600;
           padding: 0.3rem 0.9rem;
-          border: 1px solid #ccc;
+          border: 1px solid var(--border);
           border-radius: 4px;
-          background: #fff;
+          background: var(--bg);
+          color: var(--text);
           cursor: pointer;
         }
 
-        .fdd-done:hover { background: #f5f5f5; }
+        .fdd-done:hover { background: var(--surface-hover); border-color: var(--border-hover); }
 
         /* ── Results ── */
 
         .rfp-empty-msg {
-          color: #888;
+          color: var(--text-3);
           font-size: 0.95rem;
           margin: 0;
         }
@@ -336,6 +352,7 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
           font-size: 1.25rem;
           font-weight: 600;
           margin: 0 0 1rem 0;
+          color: var(--text);
         }
 
         .rfp-recipe-list {
@@ -345,35 +362,70 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
         }
 
         .rfp-recipe-card {
-          border: 1px solid #e0e0e0;
+          border: 1px solid var(--border-light);
           border-radius: 7px;
           padding: 1rem 1.25rem;
-          background: #fff;
+          background: var(--bg);
         }
 
         .rfp-recipe-title-btn {
           display: block;
-          width: 100%;
           text-align: left;
           padding: 0;
-          margin-bottom: 0.4rem;
           font-size: 1rem;
           font-weight: 600;
-          color: #1a1a1a;
+          color: var(--text);
           background: none;
           border: none;
           cursor: pointer;
           text-decoration: underline;
           text-underline-offset: 2px;
+          flex: 1;
+          min-width: 0;
         }
 
-        .rfp-recipe-title-btn:hover { color: #555; }
+        .rfp-recipe-title-btn:hover { color: var(--text-2); }
 
         .rfp-recipe-meta {
           margin: 0;
           font-size: 0.875rem;
-          color: #555;
+          color: var(--text-2);
           line-height: 1.7;
+        }
+
+        .rfp-surprise-btn {
+          padding: 0.35rem 0.8rem;
+          font-size: 0.85rem;
+          border: 1px solid var(--border);
+          border-radius: 5px;
+          background: var(--bg);
+          color: var(--text-2);
+        }
+
+        .rfp-surprise-btn:hover {
+          background: var(--surface-hover);
+          border-color: var(--border-hover);
+          color: var(--text);
+        }
+
+        .rfp-surprise-section {
+          margin-bottom: 2rem;
+        }
+
+        .rfp-surprise-heading {
+          font-size: 0.8rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          color: var(--text-3);
+          margin: 0 0 0.6rem 0;
+        }
+
+        .rfp-surprise-card {
+          border: 1px solid var(--border-light);
+          border-radius: 7px;
+          padding: 1rem 1.25rem;
+          background: var(--surface);
         }
       `}</style>
 
@@ -388,7 +440,10 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
         <div className="rfp-filter-box">
           <div className="rfp-filter-box-header">
             <h2>Filters</h2>
-            <button className="rfp-clear-btn" onClick={clearAllFilters}>Clear All</button>
+            <div style={{ display: 'flex', gap: '0.5rem' }}>
+              <button className="rfp-surprise-btn" onClick={handleSurpriseMe}>Surprise Me</button>
+              <button className="rfp-clear-btn" onClick={clearAllFilters}>Clear All</button>
+            </div>
           </div>
 
           <div className="rfp-filter-grid">
@@ -450,6 +505,39 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
           </div>
         </div>
 
+        <ExcludeIngredientsPanel
+          excludedIngredients={excludedIngredients}
+          toggleExcluded={toggleExcluded}
+          clearExcluded={clearExcluded}
+        />
+
+        {surpriseRecipe && (
+          <div className="rfp-surprise-section">
+            <p className="rfp-surprise-heading">Surprise Pick</p>
+            <div className="rfp-surprise-card">
+              <div className="recipe-card-row">
+                <button
+                  className="rfp-recipe-title-btn"
+                  onClick={() => openRecipeDetail(surpriseRecipe)}
+                >
+                  {surpriseRecipe.title}
+                </button>
+                <button
+                  className={`fav-btn${favorites.some(r => r.id === surpriseRecipe.id) ? ' fav-btn--on' : ''}`}
+                  onClick={() => toggleFavorite(surpriseRecipe)}
+                  title={favorites.some(r => r.id === surpriseRecipe.id) ? 'Remove from favorites' : 'Add to favorites'}
+                >
+                  {favorites.some(r => r.id === surpriseRecipe.id) ? '★' : '☆'}
+                </button>
+              </div>
+              <p className="rfp-recipe-meta">
+                {surpriseRecipe.mealType} &middot; {surpriseRecipe.protein} &middot; {surpriseRecipe.cuisine}
+                {surpriseRecipe.tags.length > 0 && <> &middot; {surpriseRecipe.tags.join(', ')}</>}
+              </p>
+            </div>
+          </div>
+        )}
+
         {selectedMealTypes.length === 0 &&
          selectedProteins.length === 0 &&
          selectedCuisines.length === 0 &&
@@ -458,29 +546,35 @@ function RecipeFinderPage({ setCurrentPage, setSelectedRecipe }) {
         ) : (
           <>
             <h2 className="rfp-results-heading">
-              Matching Recipes ({filteredRecipes.length})
+              Matching Recipes ({visibleRecipes.length})
             </h2>
 
             <div className="rfp-recipe-list">
-              {filteredRecipes.length === 0 ? (
+              {visibleRecipes.length === 0 ? (
                 <p className="rfp-empty-msg">No recipes match the selected filters.</p>
               ) : (
-                filteredRecipes.map((recipe) => (
+                visibleRecipes.map((recipe) => (
                   <div key={recipe.id} className="rfp-recipe-card">
-                    <button
-                      className="rfp-recipe-title-btn"
-                      onClick={() => {
-                        setSelectedRecipe(recipe);
-                        setCurrentPage('detail');
-                      }}
-                    >
-                      {recipe.title}
-                    </button>
+                    <div className="recipe-card-row">
+                      <button
+                        className="rfp-recipe-title-btn"
+                        onClick={() => openRecipeDetail(recipe)}
+                      >
+                        {recipe.title}
+                      </button>
+                      <button
+                        className={`fav-btn${favorites.some(r => r.id === recipe.id) ? ' fav-btn--on' : ''}`}
+                        onClick={() => toggleFavorite(recipe)}
+                        title={favorites.some(r => r.id === recipe.id) ? 'Remove from favorites' : 'Add to favorites'}
+                      >
+                        {favorites.some(r => r.id === recipe.id) ? '★' : '☆'}
+                      </button>
+                    </div>
                     <p className="rfp-recipe-meta">
                       {recipe.mealType} &middot; {recipe.protein} &middot; {recipe.cuisine}
                       {recipe.tags.length > 0 && <> &middot; {recipe.tags.join(', ')}</>}
                     </p>
-                  </div>
+                    </div>
                 ))
               )}
             </div>
